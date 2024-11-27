@@ -1,0 +1,29 @@
+name: Gold
+type: theme
+base theme: stable9
+description: "my gold theme"
+core_version_requirement: ^9 || ^10
+version: VERSION
+libraries:
+  - gold/global-style
+
+
+regions:
+  logo: Logo
+  top_image: Top Image
+  navbar: Navbar
+  top_news_slider: Top news slider
+  main_slider: Main Slider
+  content: Content
+  categories: categories
+  featured: Featured
+  business: Business
+  technology: Technology
+  entertainment: Entertainment
+  sports: Sports
+  popular: Popular
+  tranding: Tranding
+  footer_first: Footer First
+  footer_second: Footer Second
+  footer_third: Footer third
+  footer_fourth: Footer Fourth

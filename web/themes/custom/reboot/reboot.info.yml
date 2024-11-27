@@ -1,0 +1,26 @@
+name: 'Reboot'
+type: theme
+description: 'A custom Drupal theme inspired by the BlueMasters layout.'
+core_version_requirement: ^10 || ^9
+base theme: classy
+
+regions:
+  header: Header
+  primary_menu: Primary menu
+  secondary_menu: Secondary menu
+  page_top: Page top
+  page_bottom: Page bottom
+  highlighted: Highlighted
+  featured_top: Featured top
+  breadcrumb: Breadcrumb
+  content: Content
+  sidebar_first: Sidebar first
+  sidebar_second: Sidebar second
+  footer_first: Footer first
+  footer_second: Footer second
+
+
+
+libraries:
+  - reboot/bootstrap
+  - reboot/global

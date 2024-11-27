@@ -1,0 +1,27 @@
+{# node--[content_type].html.twig #}
+<article class="node--{{ node.bundle() }}">
+
+  {# Render the node title as a clickable link #}
+  {% if label %}
+    <h1 class="node-title">
+      <a href="{{ url }}">{{ label }}</a>
+    </h1>
+  {% endif %}
+
+  {# Render fields dynamically #}
+  <div class="node-content">
+    {{ content.field_image }}
+    {{ content.body }}
+
+    {# Render all fields if you don't need specific ones: #}
+    {# {{ content|without('field_unwanted_field') }} #}
+  </div>
+
+   {% if content.comments %}
+    <div class="node-comments">
+      <h2>Comments</h2>
+      {{ content.comments }}
+    </div>
+  {% endif %}
+
+</article>

@@ -1,0 +1,42 @@
+name: Silver
+type: theme
+description: 'Silver is a custom Drupal theme.'
+base theme: stable9
+core_version_requirement: ^10
+version: 1.0.0
+screenshot: screenshot.png
+regions:
+  logo: 'Logo'
+  top_image: 'Top Image'
+  navbar: 'Navbar'
+  top_news_slider: 'Top News Slider'
+  main_slider: 'Main Slider'
+  content: 'Content'
+  categories: 'Categories'
+  featured: 'Featured'
+  business: 'Business'
+  technology: 'Technology'
+  entertainment: 'Entertainment'
+  sports: 'Sports'
+  popular: 'Popular'
+  trending: 'Trending'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  footer_third: 'Footer Third'
+  footer_fourth: 'Footer Fourth'
+libraries:
+  - silver/base
+  - silver/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - silver/user
+  core/drupal.dropbutton:
+    - silver/dropbutton
+  core/drupal.dialog:
+    - silver/dialog
+  file/drupal.file:
+    - silver/file
+  core/drupal.progress:
+    - silver/progress
+generator: 'starterkit_theme:10.3.8'

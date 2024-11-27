@@ -1,0 +1,166 @@
+{#
+/**
+ * @file
+ * Theme override to display a single page with custom regions.
+ *
+ * The doctype, html, head, and body tags are not in this template. Instead, 
+ * they are in the html.html.twig template in this directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - page.header: Items for the header region.
+ * - page.primary_menu: Items for the primary menu region.
+ * - page.secondary_menu: Items for the secondary menu region.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ * - page.highlighted: Items for the highlighted content region.
+ * - page.help: Dynamic help text, mostly for admin pages.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.footer: Items for the footer region.
+ *
+ * Custom regions defined in the theme:
+ * - page.logo: The site logo or branding area.
+ * - page.top_image: The area for displaying a top image banner.
+ * - page.navbar: The navigation bar.
+ * - page.top_news_slider: A section for a top news slider.
+ * - page.main_slider: A section for the main slider.
+ * - page.categories: A section for displaying categories.
+ * - page.featured: A section for featured content.
+ * - page.business: A section for business-related content.
+ * - page.technology: A section for technology-related content.
+ * - page.entertainment: A section for entertainment-related content.
+ * - page.sports: A section for sports-related content.
+ * - page.popular: A section for popular content.
+ * - page.trending: A section for trending content.
+ * - page.footer_first, page.footer_second, page.footer_third, page.footer_fourth:
+ *   Four distinct regions in the footer for organizing content.
+ *
+ * Regions are wrapped in conditional logic to ensure they render only when
+ * content is assigned in the Block Layout.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+
+
+
+<div class="layout-container">
+
+  <header role="banner">
+    {{ page.header }}
+    {% if page.logo %}
+      <div id="logo">{{ page.logo }}</div>
+    {% endif %}
+  </header>
+
+  {% if page.top_image %}
+    <div id="top-image">{{ page.top_image }}</div>
+  {% endif %}
+
+  {% if page.navbar %}
+    <nav id="navbar" role="navigation">
+      {{ page.navbar }}
+    </nav>
+  {% endif %}
+
+  {{ page.primary_menu }}
+  {{ page.secondary_menu }}
+
+  {{ page.breadcrumb }}
+
+  {% if page.top_news_slider %}
+    <div id="top-news-slider">{{ page.top_news_slider }}</div>
+  {% endif %}
+
+  {% if page.main_slider %}
+    <div id="main-slider">{{ page.main_slider }}</div>
+  {% endif %}
+
+  {{ page.highlighted }}
+  {{ page.help }}
+
+  <main role="main">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    <div class="layout-content">
+      {{ page.content }}
+    </div>{# /.layout-content #}
+
+    {% if page.categories %}
+      <section id="categories">{{ page.categories }}</section>
+    {% endif %}
+
+    {% if page.featured %}
+      <section id="featured">{{ page.featured }}</section>
+    {% endif %}
+
+    {% if page.business %}
+      <section id="business">{{ page.business }}</section>
+    {% endif %}
+
+    {% if page.technology %}
+      <section id="technology">{{ page.technology }}</section>
+    {% endif %}
+
+    {% if page.entertainment %}
+      <section id="entertainment">{{ page.entertainment }}</section>
+    {% endif %}
+
+    {% if page.sports %}
+      <section id="sports">{{ page.sports }}</section>
+    {% endif %}
+
+    {% if page.popular %}
+      <section id="popular">{{ page.popular }}</section>
+    {% endif %}
+
+    {% if page.trending %}
+      <section id="trending">{{ page.trending }}</section>
+    {% endif %}
+
+    {% if page.sidebar_first %}
+      <aside class="layout-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="layout-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+  </main>
+
+  {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
+    <footer role="contentinfo">
+      {% if page.footer_first %}
+        <div id="footer-first">{{ page.footer_first }}</div>
+      {% endif %}
+      {% if page.footer_second %}
+        <div id="footer-second">{{ page.footer_second }}</div>
+      {% endif %}
+      {% if page.footer_third %}
+        <div id="footer-third">{{ page.footer_third }}</div>
+      {% endif %}
+      {% if page.footer_fourth %}
+        <div id="footer-fourth">{{ page.footer_fourth }}</div>
+      {% endif %}
+    </footer>
+  {% endif %}
+
+</div>{# /.layout-container #}

@@ -1,0 +1,14 @@
+name: 'Blue Masters'
+type: theme
+description: 'A custom Drupal theme inspired by the BlueMasters layout.'
+core_version_requirement: ^10 || ^9
+base theme: classy
+libraries:
+  - blue_masters/global-styling
+regions:
+  header: Header
+  navigation: Navigation
+  sidebar_first: 'Sidebar First'
+  content: Content
+  sidebar_second: 'Sidebar Second'
+  footer: Footer

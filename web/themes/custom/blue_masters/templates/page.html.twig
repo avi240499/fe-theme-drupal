@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ language.getId }}">
+  <head>
+    <head-placeholder token="{{ placeholder_token|raw }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token|raw }}">
+    <js-placeholder token="{{ placeholder_token|raw }}">
+  </head>
+  <body class="{{ attributes.class }}">
+    <header id="header">
+      <div class="container">
+        {{ page.header }}
+      </div>
+    </header>
+
+    <nav id="navigation">
+      {{ page.navigation }}
+    </nav>
+
+    <div class="main-container">
+      <aside class="sidebar-first">
+        {{ page.sidebar_first }}
+      </aside>
+
+      <main id="content" role="main">
+        {{ page.content }}
+      </main>
+
+      <aside class="sidebar-second">
+        {{ page.sidebar_second }}
+      </aside>
+    </div>
+
+    <footer id="footer">
+      {{ page.footer }}
+    </footer>
+
+    <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+  </body>
+</html>

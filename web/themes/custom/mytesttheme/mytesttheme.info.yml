@@ -1,0 +1,15 @@
+name: My Test Theme
+type: theme
+description: this a test theme
+core_version_requirement: ^9 || ^10
+base theme: classy
+screenshot: screenshot.png
+regions: 
+  header: Header
+  main_navigation: Main Navigation
+  content: Content
+  page_up: Page Up
+  page_down: Page Down
+  down: Down
+libraries:
+  - mytesttheme/global-css

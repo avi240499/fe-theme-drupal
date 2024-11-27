@@ -1,0 +1,17 @@
+<nav class="breadcrumb custom-breadcrumb" aria-label="{{ 'Breadcrumb'|t }}">
+  <ol class="breadcrumb-list">
+    {% for item in breadcrumb %}
+      <li class="breadcrumb-item">
+        {% if item.url %}
+          <a href="{{ item.url }}" class="breadcrumb-link">{{ item.text }}</a>
+        {% else %}
+          <span class="breadcrumb-current">{{ item.text }}</span>
+          {# {{ dump(item) }} #}
+        {% endif %}
+      </li>
+      {% if not loop.last %}
+        <span class="breadcrumb-separator">/</span>
+      {% endif %}
+    {% endfor %}
+  </ol>
+</nav>

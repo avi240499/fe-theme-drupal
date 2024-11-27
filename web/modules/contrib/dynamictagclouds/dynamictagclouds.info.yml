@@ -1,0 +1,14 @@
+name: Dynamic Tag Clouds
+type: module
+description: Module provides a Tag Cloud based searching of content.
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+package: Taxonomy
+
+dependencies:
+  - token:token
+
+# Information added by Drupal.org packaging script on 2020-05-05
+version: '8.x-2.1'
+project: 'dynamictagclouds'
+datestamp: 1588675352

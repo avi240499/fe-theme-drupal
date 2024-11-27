@@ -1,0 +1,16 @@
+name: 'Gaming Theme'
+type: theme
+description: 'A custom gaming theme for Drupal.'
+core_version_requirement: ^9 || ^10
+base theme: classy
+package: Custom
+libraries:
+  - gaming_theme/global-styling
+regions:
+  header: 'Header'
+  primary_menu: 'Primary Menu'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  footer: 'Footer'
+dependencies:
+  - drupal:classy

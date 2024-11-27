@@ -1,0 +1,28 @@
+
+
+<div class="col-lg-6">
+    <div class="position-relative mb-3">
+        {{ fields.field_image.content }}
+        <div class="overlay position-relative bg-light">
+            <div class="mb-2" style="font-size: 14px;">
+                <a href="">{{ fields.field_categories.content }}</a>
+                <span class="px-1">/</span>
+                <span>January 01, 2045</span>
+            </div>
+
+        {% set raw_content = fields.title.content|raw %}
+
+        {# Apply the custom class directly to the existing anchor tag #}
+        {% set modified_content = raw_content|replace({'<a ': '<a class="custom-link" '}) %}
+
+        <div>
+            <div class="text-secondary font-weight-semi-bold">
+                {{ modified_content|raw }}
+            </div>
+        </div>
+
+            {# {{ fields.title.content }} #}
+            {{ fields.body.content }}
+        </div>
+    </div>
+</div>

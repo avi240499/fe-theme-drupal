@@ -1,0 +1,24 @@
+<div class="position-relative overflow-hidden" style="height: 300px;">
+    {{ fields.field_image.content }}                   
+    <div class="overlay">
+        <div class="mb-1" style="font-size: 13px;">
+            <a class="text-white" href="">{{ fields.field_categories.content }}</a>
+            <span class="px-1 text-white">/</span>
+            <a class="text-white" href="">{{ fields.changed.content }}</a>
+        </div>
+        {# <a class="h4 m-0 text-white" href="">{{ fields.title.content }}</a> #}
+        {% set raw_content = fields.title.content|raw %}
+
+        {# Apply the custom class directly to the existing anchor tag #}
+        {% set modified_content = raw_content|replace({'<a ': '<a class="custom-link" '}) %}
+
+        <div>
+            <div class="text-secondary font-weight-semi-bold">
+                {{ modified_content|raw }}
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

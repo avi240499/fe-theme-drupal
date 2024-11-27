@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head-placeholder token="{{ head_placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+  <body class="{{ attributes.class }}">
+    <header>
+      <h1>Gaming Theme</h1>
+      <nav>{{ page.primary_menu }}</nav>
+    </header>
+
+    <main role="main">
+      <div class="content">
+        {{ page.content }}
+      </div>
+      <aside class="sidebar">
+        {{ page.sidebar }}
+      </aside>
+    </main>
+
+    <footer>
+      <p>&copy; {{ "now"|date("Y") }} Gaming Theme. All rights reserved.</p>
+    </footer>
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>

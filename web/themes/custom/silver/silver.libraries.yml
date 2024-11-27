@@ -1,0 +1,80 @@
+base:
+  version: 1.0
+  css:
+    component:
+      css/style.css: {}
+      css/owl.carousel.min.css: {}
+      https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css: {type: external}
+  js:
+    https://code.jquery.com/jquery-3.4.1.min.js: {type: external}
+    https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js: {type: external}
+    js/easing.min.js: {}
+    js/owl.carousel.min.js: {}
+    js/main.js: {}
+
+dialog:
+  version: 1.0
+  css:
+    component:
+      css/components/dialog.css:
+        weight: -10
+
+dropbutton:
+  version: 1.0
+  css:
+    component:
+      css/components/dropbutton.css:
+        weight: -10
+
+file:
+  version: 1.0
+  css:
+    component:
+      css/components/file.css:
+        weight: -10
+
+image-widget:
+  version: 1.0
+  css:
+    component:
+      css/components/image-widget.css: {}
+
+indented:
+  version: 1.0
+  css:
+    component:
+      css/components/indented.css: {}
+
+messages:
+  version: 1.0
+  css:
+    component:
+      css/components/messages.css:
+        weight: -10
+
+node:
+  version: 1.0
+  css:
+    component:
+      css/components/node.css:
+        weight: -10
+
+progress:
+  version: 1.0
+  css:
+    component:
+      css/components/progress.css:
+        weight: -10
+
+search-results:
+  version: 1.0
+  css:
+    component:
+      css/components/search-results.css: {}
+
+user:
+  version: 1.0
+  css:
+    component:
+      css/components/user.css:
+        weight: -10

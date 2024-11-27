@@ -1,0 +1,56 @@
+<!--Topbar start-->
+<div class="container-fluid">
+        <div class="row align-items-center bg-light px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="d-flex justify-content-between">
+                    <div class="bg-primary text-white text-center py-2" style="width: 100px;">Tranding</div>
+                    <div class="owl-carousel owl-carousel-1 tranding-carousel position-relative d-inline-flex align-items-center ml-3 owl-loaded owl-drag" style="width: calc(100% - 100px); padding-left: 90px;">
+                        
+                        
+                    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2080px, 0px, 0px); transition: 2s; width: 4162px; text-color:'black';"><div class="owl-item cloned" style="width: 693.6px;"><div class="text-truncate"><a class="text-secondary" style="text-color:'black';"href="">Labore sit justo amet eos sed, et sanctus dolor diam eos</a></div></div><div class="owl-item cloned" style="width: 693.6px;"><div class="text-truncate"><a class="text-secondary" href="">Gubergren elitr amet eirmod et lorem diam elitr, ut est erat Gubergren elitr amet eirmod et lorem diam elitr, ut est erat</a></div></div><div class="owl-item" style="width: 693.6px;"><div class="text-truncate"><a class="text-secondary" href="">Labore sit justo amet eos sed, et sanctus dolor diam eos</a></div></div><div class="owl-item active" style="width: 693.6px;"><div class="text-truncate"><a class="text-secondary" href="">Gubergren elitr amet eirmod et lorem diam elitr, ut est erat Gubergren elitr amet eirmod et lorem diam elitr, ut est erat</a></div></div><div class="owl-item cloned" style="width: 693.6px;"><div class="text-truncate"><a class="text-secondary" href="">Labore sit justo amet eos sed, et sanctus dolor diam eos</a></div></div><div class="owl-item cloned" style="width: 693.6px;"><div class="text-truncate"><a class="text-secondary" href="">Gubergren elitr amet eirmod et lorem diam elitr, ut est erat Gubergren elitr amet eirmod et lorem diam elitr, ut est erat</a></div></div></div></div><div class="owl-nav"><div class="owl-prev"><i class="fa fa-angle-left"></i></div><div class="owl-next"><i class="fa fa-angle-right"></i></div></div><div class="owl-dots disabled"></div></div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right d-none d-md-block">
+                {{ "now"|date("F j, Y, g:i a", "Asia/Kolkata") }}
+            </div>
+        </div>
+        <div class="row align-items-center py-2 px-lg-5">
+            <div class="col-lg-4">
+               {{ page.logo }}
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+                {{ page.top_image }}
+                <img class="img-fluid" src="img/ads-700x70.jpg" alt="">
+            </div>
+        </div>
+    </div>
+<!--Topbar End-->
+
+<!--Navbar start-->
+    <div class="container-fluid p-0 mb-3">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-uppercase"><span class="text-primary">News</span>Room</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                {{ page.navbar }}
+            </div>
+        </nav>
+    </div>
+<!--Navbar End-->
+
+
+
+
+{# <header>
+<div class="region-top-image">
+    {{ page.top_image }}
+  </div>
+  <div class="region-navbar">
+    {{ page.navbar }}
+  </div>
+  
+</header> #}

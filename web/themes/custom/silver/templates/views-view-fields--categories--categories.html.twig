@@ -1,0 +1,30 @@
+<style>
+    
+    .custom-link {
+        color: white !important;
+        text-decoration: none; 
+    }
+
+    .custom-link:hover {
+        color: #555;
+        text-decoration: none;
+    }
+</style>
+
+
+
+<div class="position-relative overflow-hidden mb-3" style="height: 80px;">
+    {{ fields.field_categories_image.content }}
+    <span class="overlay align-items-center justify-content-center h4 m-0 text-white text-decoration-none">
+     {% set raw_content = fields.name.content|raw %}
+
+    
+        {% set modified_content = raw_content|replace({'<a ': '<a class="custom-link" '}) %}
+
+        <div>
+            <div class="text-secondary font-weight-semi-bold">
+                {{ modified_content|raw }}
+            </div>
+        </div>
+     {# {{ fields.name.content }} #}
+</div>
