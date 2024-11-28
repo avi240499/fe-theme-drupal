@@ -12,7 +12,6 @@
 
         {% set raw_content = fields.title.content|raw %}
 
-        {# Apply the custom class directly to the existing anchor tag #}
         {% set modified_content = raw_content|replace({'<a ': '<a class="custom-link" '}) %}
 
         <div>
@@ -20,8 +19,6 @@
                 {{ modified_content|raw }}
             </div>
         </div>
-
-            {# {{ fields.title.content }} #}
             {{ fields.body.content }}
         </div>
     </div>

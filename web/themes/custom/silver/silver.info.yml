@@ -24,6 +24,7 @@ regions:
   footer_second: 'Footer Second'
   footer_third: 'Footer Third'
   footer_fourth: 'Footer Fourth'
+  footer_fifth: 'Footer Fifth'
 libraries:
   - silver/base
   - silver/messages
